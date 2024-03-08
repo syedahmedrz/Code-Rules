@@ -6,8 +6,19 @@ project-root/
 │
 ├── src/                      # Source code directory
 │   ├── controllers/         # Controllers for handling HTTP requests
-│   │   ├── userController.js
-│   │   └── ...
+|   |   ├── user/
+│   |   │   ├── index.js
+│   │   |   ├── user_add.js
+│   │   |   └── user_remove.js
+|   │   ├── notes/
+|   │   │   ├── index.js
+|   │   │   ├── note_add.js
+|   │   │   └── note_remove.js
+|   │   ├── bookmark/
+|   │   │   ├── index.js
+|   │   │   ├── bookmark_add.js
+|   │   │   └── bookmark_remove.js
+│   |   └── index.js
 │   │
 │   ├── models/              # Data models and database schemas
 │   │   ├── User.js
