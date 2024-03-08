@@ -1,0 +1,58 @@
+// controllers/user/index.js
+
+const userAddController = require('./user_add');
+const userRemoveController = require('./user_remove');
+
+module.exports = {
+  addUser: userAddController,
+  removeUser: userRemoveController
+};
+
+
+// controllers/notes/index.js
+
+const noteAddController = require('./note_add');
+const noteRemoveController = require('./note_remove');
+
+module.exports = {
+  addNote: noteAddController,
+  removeNote: noteRemoveController
+};
+
+
+// controllers/bookmark/index.js
+
+const bookmarkAddController = require('./bookmark_add');
+const bookmarkRemoveController = require('./bookmark_remove');
+
+module.exports = {
+  addBookmark: bookmarkAddController,
+  removeBookmark: bookmarkRemoveController
+};
+
+
+// Main Index File
+// controllers/index.js
+
+const userController = require('./user');
+const notesController = require('./notes');
+const bookmarkController = require('./bookmark');
+
+module.exports = {
+  user: userController,
+  notes: notesController,
+  bookmark: bookmarkController
+};
+
+
+// user_router.js
+
+const express = require('express');
+const router = express.Router();
+const { user } = require('../controllers');
+
+router.post('/add', user.addUser);
+router.delete('/remove', user.removeUser);
+
+module.exports = router;
+
