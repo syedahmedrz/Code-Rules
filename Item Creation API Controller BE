@@ -1,0 +1,56 @@
+// models
+const GenericModel = require('../../models/generic_model/generic_model');
+
+// Add new item controller
+const addItem = async (req, res) => {
+    try {
+        const { itemName } = req.body; // Change variable name to camelCase
+
+        // Check if the item name is provided
+        if (!itemName) {
+            return res.status(400).json({
+                status: 'failed',
+                action: 'create',
+                ref: 'addItem',
+                message: 'Item name is required!',
+                endpoint: req.originalUrl, // Include endpoint
+                frontendNote: 'Please provide a valid item name.', // Include frontend note
+                userNote: 'Please enter a name for the item.', // Include user note
+                data: {} // Change key to "data" and set to empty object
+            });
+        }
+
+        // Create a new item instance
+        const newItem = new GenericModel({
+            name: itemName, // Correct variable name
+        });
+
+        // Save the new item to the database
+        const savedItem = await newItem.save();
+
+        res.status(201).json({
+            status: 'success',
+            action: 'create',
+            ref: 'addItem',
+            message: 'New item added successfully',
+            endpoint: req.originalUrl, // Include endpoint
+            frontendNote: 'Item added successfully.', // Include frontend note
+            userNote: '', // Include user note if needed
+            data: savedItem // Change key to "data" and send the saved item
+        });
+    } catch (error) {
+        console.error('Error adding item:', error);
+        res.status(500).json({
+            status: 'failed',
+            action: 'create',
+            ref: 'addItem',
+            message: 'Error while adding new item',
+            endpoint: req.originalUrl, // Include endpoint
+            frontendNote: 'An error occurred while adding the item. Please try again later.', // Include frontend note
+            userNote: '', // Include user note if needed
+            data: {} // Change key to "data" and set to empty object
+        });
+    }
+}
+
+module.exports = addItem;
