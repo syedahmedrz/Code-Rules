@@ -1,0 +1,75 @@
+// Variable Naming Convention (camelCase)
+const myVariable = 42;
+let userName = "JohnDoe";
+const numOfItems = 10;
+
+// Function Naming Convention (camelCase)
+function getUserData() {
+  // Function body
+}
+
+function calculateTotalPrice() {
+  // Function body
+}
+
+function validateInput() {
+  // Function body
+}
+
+// Class Naming Convention (PascalCase)
+class UserService {
+  // Class methods
+}
+
+class ProductModel {
+  // Class methods
+}
+
+class ApiClient {
+  // Class methods
+}
+
+// File Naming Convention
+// PascalCase for class-containing files
+// Example: UserService.js, ProductModel.js, ApiClient.js
+// camelCase or kebab-case for other files
+// Example (camelCase): userService.js, configUtils.js
+// Example (kebab-case): user-service.js, config-utils.js
+
+// Directory Naming Convention (kebab-case)
+// Example: user-service, product-model, api-client
+
+// Constants Naming Convention (UPPER_CASE)
+const MAX_RETRIES = 5;
+const API_BASE_URL = "https://api.example.com";
+const ERROR_MESSAGES = {
+  NOT_FOUND: "Resource not found",
+  SERVER_ERROR: "Internal server error",
+};
+
+// Parameter Naming Convention (camelCase)
+function greetUser(userName) {
+  // Function body
+}
+
+function calculateArea(radius) {
+  // Function body
+}
+
+// Abbreviations
+// Avoid unless widely understood and clear
+// Example (Avoid): usrCnt (use userCount instead), srv (use server instead)
+
+// Meaningful Names
+const userData = { /* User data object */ };
+function formatName(name) {
+  // Function body
+}
+
+// Consistency
+// Maintain consistent naming conventions throughout the codebase
+// Example: Stick to either camelCase or kebab-case for file names consistently
+
+// Documentation
+// Add comments to explain the purpose and usage of variables, functions, and classes
+// Example: Add comments above function declarations explaining their parameters and return values
