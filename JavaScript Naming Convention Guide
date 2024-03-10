@@ -36,8 +36,9 @@ class ApiClient {
 // Example (camelCase): userService.js, configUtils.js
 // Example (kebab-case): user-service.js, config-utils.js
 
-// Directory Naming Convention (kebab-case)
+// Directory Naming Convention (kebab-case, snake_case)
 // Example: user-service, product-model, api-client
+// Example: user_service, product_model, api_client
 
 // Constants Naming Convention (UPPER_CASE)
 const MAX_RETRIES = 5;
