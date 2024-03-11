@@ -20,6 +20,11 @@ project-root/
 │   │   ├── About.js
 │   │   └── ...
 │   │
+│   ├── outlets/                # Page components representing different views/routes
+│   │   ├── AuthOutlet.jsx
+│   │   ├── DashboardOutlet.jsx
+│   │   └── ...
+│   │
 │   ├── styles/               # Stylesheets (CSS, SCSS, etc.)
 │   │   ├── main.css
 │   │   ├── variables.scss    # SCSS variables
