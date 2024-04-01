@@ -1,0 +1,19 @@
+React-router-dom  : For Routing and navigation .
+Redux-toolkit  :For centralized state management
+React-toastify: For in app notifications or alerts
+React-icons:  It is a collection of multiple icon libraries 
+React-google-charts:  For making charts and graphs
+React-dropzone:  File upload and drag and drop files
+Tailwind Css: For UI
+React Query: For data fetching effectively and caching 
+
+Backend Packages
+Mongoose:For Schema based collections middlewares and validations
+express:A library for nodejs that simplifies process of building server and apis
+Dotenv For securely save hidden private information i.e JWT secret , Mongodb atlas URI and more.
+Cors : To simply deal with cross origin restriction policies
+Bcryptjs : For encryption of password in non-readable format 
+Jwt : For custom Authentication 
+Multer:  For files storage manager
+Express Validator: For validating user input
+Compression : to optimize 
